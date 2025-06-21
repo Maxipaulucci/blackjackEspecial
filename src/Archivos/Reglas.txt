@@ -1,0 +1,41 @@
+El objetivo del juego es acumular una mano de cartas con un valor total lo más cercano posible a 21 sin pasarse. El jugador compite contra el crupier, y el juego se juega en rondas.
+
+Cartas y Valores:
+
+Las cartas numeradas (2-10) tienen su valor nominal.
+El As (11) funciona como un comodín, permitiendo al jugador elegir su valor entre 1 y 11 puntos al momento de obtenerlo.
+Además de las cartas tradicionales, existen dos cartas especiales que pueden influir en el juego: 'Cambio de Carta' y 'Sumador'.
+Inicio del Juego:
+
+Cada jugador comienza con dos cartas repartidas desde una baraja inglesa y una carta de la baraja especial.
+El crupier recibe una carta visible y una oculta.
+Turnos de los Jugadores:
+
+Los jugadores pueden elegir entre:
+Pedir Carta: Recibir una nueva carta para sumar a su mano.
+Plantarse: Mantener su mano actual y finalizar su turno.
+También pueden utilizar la carta especial obtenida desde el principio, pero una vez sola en toda la partida.
+Reglas Especiales:
+
+Si un jugador obtiene un As, se le pide que elija su valor (entre 1 y 11).
+Las cartas especiales tienen los siguientes efectos:
+Cambio de Carta: Permite al jugador descartar una carta de su mano y recibir una nueva carta en su lugar.
+Sumador: Permite al jugador sumar un punto adicional a los puntos que tiene en el momento.
+Turno del Crupier:
+
+El crupier debe pedir cartas hasta alcanzar un mínimo de 17 puntos.
+Si el crupier supera los 21 puntos, todos los jugadores restantes que no se hayan pasado ganan la ronda automáticamente.
+Condiciones de Victoria:
+
+Si el valor total de la mano del jugador es mayor que el del crupier y no excede los 21 puntos, el jugador gana.
+Si el valor total de la mano del crupier es mayor que el de cualquier jugador sin exceder los 21 puntos, el crupier gana.
+En caso de empate (mismo valor en ambas manos), el resultado es un empate.
+Sistema de Puntos:
+
+Cada jugador empieza con una cantidad de puntos determinada (por defecto, 5).
+Gana un punto si gana la ronda contra el crupier.
+Pierde un punto si pierde la ronda contra el crupier.
+El juego continúa en rondas hasta que un jugador alcanza 10 puntos (victoria) o llega a 0 puntos (derrota).
+Final del Juego:
+
+El juego termina cuando un jugador acumula 10 puntos (victoria) o cuando uno de los jugadores se queda sin puntos (derrota).
