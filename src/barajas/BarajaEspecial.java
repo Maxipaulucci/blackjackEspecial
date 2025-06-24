@@ -1,3 +1,5 @@
+package barajas;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -10,7 +12,7 @@ public class BarajaEspecial {
         especiales.add("Cambio de Carta");
     }
 
-    String repartirCarta() {
+    public String repartirCarta() {
         Random random = new Random();
         String cartaEspecial = especiales.get(random.nextInt(especiales.size()));
         return cartaEspecial;

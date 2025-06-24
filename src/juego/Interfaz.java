@@ -1,3 +1,5 @@
+package juego;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -5,6 +7,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import personas.Jugador;
+import personas.Crupier;
+import barajas.BarajaInglesa;
+import barajas.BarajaEspecial;
 
 public class Interfaz extends JFrame {
     private JPanel panelInicial;
@@ -29,7 +35,6 @@ public class Interfaz extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 185);
         setLocationRelativeTo(null);
-
 
         // Creación de paneles
         panelInicial = new JPanel();
@@ -119,7 +124,6 @@ public class Interfaz extends JFrame {
         BarajaInglesa barajaInglesa = new BarajaInglesa();
         BarajaEspecial barajaEspecial = new BarajaEspecial();
 
-
         // Botones del panel "panelInicial"
 
         // Agregar acción al botón de "estrategia"
@@ -131,7 +135,7 @@ public class Interfaz extends JFrame {
                 ImageIcon imageIcon = new ImageIcon(imagePath);
 
                 // Mostrar el JOptionPane con el mensaje y la imagen
-                JOptionPane.showMessageDialog(null,null, "Estrategia", JOptionPane.INFORMATION_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(null, null, "Estrategia", JOptionPane.INFORMATION_MESSAGE, imageIcon);
             }
         });
 
@@ -192,9 +196,11 @@ public class Interfaz extends JFrame {
                 boolean res = operaciones.funcionAs(jugador1);
 
                 if (res == true) {
-                    int decision = Integer.parseInt(JOptionPane.showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
+                    int decision = Integer.parseInt(JOptionPane
+                            .showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
                     while (decision < 1 || decision > 11) {
-                        decision = Integer.parseInt(JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
+                        decision = Integer.parseInt(
+                                JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
                     }
                     int nuevoValor = decision;
                     ArrayList<Integer> manoInglesa = jugador1.getManoInglesa();
@@ -255,9 +261,11 @@ public class Interfaz extends JFrame {
                 textoManoJugadorInglesaLista.setText("Cartas inglesas: " + jugador1.getManoInglesa());
 
                 if (res == true) {
-                    int decision = Integer.parseInt(JOptionPane.showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
+                    int decision = Integer.parseInt(JOptionPane
+                            .showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
                     while (decision < 1 || decision > 11) {
-                        decision = Integer.parseInt(JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
+                        decision = Integer.parseInt(
+                                JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
                     }
                     int nuevoValor = decision;
                     ArrayList<Integer> manoInglesa = jugador1.getManoInglesa();
@@ -279,9 +287,11 @@ public class Interfaz extends JFrame {
                     textoManoJugadorInglesaLista2.setText("Cartas inglesas: " + jugador2.getManoInglesa());
 
                     if (res2 == true) {
-                        int decision = Integer.parseInt(JOptionPane.showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
+                        int decision = Integer.parseInt(JOptionPane.showInputDialog(
+                                "Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
                         while (decision < 1 || decision > 11) {
-                            decision = Integer.parseInt(JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
+                            decision = Integer.parseInt(
+                                    JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
                         }
                         int nuevoValor = decision;
                         ArrayList<Integer> manoInglesa = jugador2.getManoInglesa();
@@ -289,10 +299,10 @@ public class Interfaz extends JFrame {
                         jugador2.setManoInglesa(manoInglesa);
 
                         textoManoJugadorInglesaLista2.setText("Cartas inglesas: " + jugador2.getManoInglesa());
-                        textoManoJugadorInglesa2.setText("Suma de " + jugador2.getNombre() + ": " + jugador2.sumarMano());
+                        textoManoJugadorInglesa2
+                                .setText("Suma de " + jugador2.getNombre() + ": " + jugador2.sumarMano());
                         res2 = false;
                     }
-
 
                 }
             }
@@ -314,9 +324,11 @@ public class Interfaz extends JFrame {
                 textoManoJugadorInglesaLista2.setText("Cartas inglesas: " + jugador2.getManoInglesa());
 
                 if (res == true) {
-                    int decision = Integer.parseInt(JOptionPane.showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
+                    int decision = Integer.parseInt(JOptionPane
+                            .showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
                     while (decision < 1 || decision > 11) {
-                        decision = Integer.parseInt(JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
+                        decision = Integer.parseInt(
+                                JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
                     }
                     int nuevoValor = decision;
                     ArrayList<Integer> manoInglesa = jugador2.getManoInglesa();
@@ -352,9 +364,11 @@ public class Interfaz extends JFrame {
                 textoManoJugadorInglesaLista2.setText("Cartas inglesas: " + jugador2.getManoInglesa());
 
                 if (res2 == true) {
-                    int decision = Integer.parseInt(JOptionPane.showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
+                    int decision = Integer.parseInt(JOptionPane
+                            .showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
                     while (decision < 1 || decision > 11) {
-                        decision = Integer.parseInt(JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
+                        decision = Integer.parseInt(
+                                JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
                     }
                     int nuevoValor = decision;
                     ArrayList<Integer> manoInglesa = jugador2.getManoInglesa();
@@ -383,7 +397,6 @@ public class Interfaz extends JFrame {
         // Agregar acción al botón de "sumador1"
         sumador1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                BarajaInglesa barajaInglesa = new BarajaInglesa();
                 ArrayList<Integer> manoInglesa = jugador1.getManoInglesa();
 
                 manoInglesa.remove(0);
@@ -392,7 +405,8 @@ public class Interfaz extends JFrame {
                 jugador1.puntos++;
                 JOptionPane.showMessageDialog(null, "Has sumado otro punto mas! | Puntos: " + jugador1.puntos);
 
-                textoPuntosJugador1.setText(jugador1.getNombre() + ": " + jugador1.puntos + " puntos | Carta especial: " + jugador1.getManoEspecial());
+                textoPuntosJugador1.setText(jugador1.getNombre() + ": " + jugador1.puntos + " puntos | Carta especial: "
+                        + jugador1.getManoEspecial());
 
                 panelJugar.remove(sumador1);
                 panelJugar.revalidate();
@@ -403,7 +417,6 @@ public class Interfaz extends JFrame {
         // Agregar acción al botón de "sumador2"
         sumador2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                BarajaInglesa barajaInglesa = new BarajaInglesa();
                 ArrayList<Integer> manoInglesa = jugador2.getManoInglesa();
 
                 manoInglesa.remove(0);
@@ -412,7 +425,8 @@ public class Interfaz extends JFrame {
                 jugador2.puntos++;
                 JOptionPane.showMessageDialog(null, "Has sumado otro punto mas! | Puntos: " + jugador2.puntos);
 
-                textoPuntosJugador2.setText(jugador2.getNombre() + ": " + jugador2.puntos + " puntos | Carta especial: " + jugador2.getManoEspecial());
+                textoPuntosJugador2.setText(jugador2.getNombre() + ": " + jugador2.puntos + " puntos | Carta especial: "
+                        + jugador2.getManoEspecial());
 
                 panelJugar2.remove(sumador2);
                 panelJugar2.revalidate();
@@ -564,11 +578,13 @@ public class Interfaz extends JFrame {
 
                 }
 
-                if ((jugador1.sumarMano() < crupier.sumarMano() && crupier.sumarMano() <= 21) || jugador1.sumarMano() > 21) {
+                if ((jugador1.sumarMano() < crupier.sumarMano() && crupier.sumarMano() <= 21)
+                        || jugador1.sumarMano() > 21) {
                     perdioPunto1 = true;
 
                 }
-                if ((jugador2.sumarMano() < crupier.sumarMano() && crupier.sumarMano() <= 21) || jugador2.sumarMano() > 21) {
+                if ((jugador2.sumarMano() < crupier.sumarMano() && crupier.sumarMano() <= 21)
+                        || jugador2.sumarMano() > 21) {
                     perdioPunto2 = true;
                 }
 
@@ -592,9 +608,10 @@ public class Interfaz extends JFrame {
                     jugador2.puntos++;
                 }
 
-                textoPuntosJugador1.setText(jugador1.getNombre() + ": " + jugador1.puntos + " puntos | Carta especial: " + jugador1.getManoEspecial());
-                textoPuntosJugador2.setText(jugador2.getNombre() + ": " + jugador2.puntos + " puntos | Carta especial: " + jugador2.getManoEspecial());
-
+                textoPuntosJugador1.setText(jugador1.getNombre() + ": " + jugador1.puntos + " puntos | Carta especial: "
+                        + jugador1.getManoEspecial());
+                textoPuntosJugador2.setText(jugador2.getNombre() + ": " + jugador2.puntos + " puntos | Carta especial: "
+                        + jugador2.getManoEspecial());
 
                 if (jugador1.puntos == 0 && jugador2.puntos == 0) {
                     cardLayout.show(getContentPane(), "panelFinal");
@@ -661,9 +678,11 @@ public class Interfaz extends JFrame {
                 boolean res = operaciones.funcionAs(jugador1);
 
                 if (res == true) {
-                    int decision = Integer.parseInt(JOptionPane.showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
+                    int decision = Integer.parseInt(JOptionPane
+                            .showInputDialog("Te ha tocado un comodin, ingrese el valor del comodin / de 1 a 11: "));
                     while (decision < 1 || decision > 11) {
-                        decision = Integer.parseInt(JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
+                        decision = Integer.parseInt(
+                                JOptionPane.showInputDialog("Error, ingrese el valor del comodin / de 1 a 11: "));
                     }
                     int nuevoValor = decision;
                     ArrayList<Integer> manoInglesa = jugador1.getManoInglesa();

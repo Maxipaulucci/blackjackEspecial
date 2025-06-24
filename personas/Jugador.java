@@ -1,3 +1,5 @@
+package personas;
+
 import java.util.ArrayList;
 
 public class Jugador {
@@ -5,7 +7,7 @@ public class Jugador {
     public ArrayList<Integer> manoInglesa;
     public String manoEspecial;
     public int suma = 0;
-    public int manoAnterior=0;
+    public int manoAnterior = 0;
     public int puntos;
 
     public Jugador(String nombre, ArrayList<Integer> manoInglesa, String manoEspecial, int puntos) {
@@ -23,7 +25,7 @@ public class Jugador {
         this.manoAnterior = manoAnterior;
     }
 
-    public int sumarMano(){
+    public int sumarMano() {
         suma = 0;
         for (int i = 0; i < manoInglesa.size(); i++) {
             suma += manoInglesa.get(i);

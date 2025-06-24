@@ -1,11 +1,13 @@
+package personas;
+
 import java.util.ArrayList;
 
 public class Crupier {
     private ArrayList<Integer> mano;
     int suma = 0;
 
-    public int sumarMano(){
-        suma=0;
+    public int sumarMano() {
+        suma = 0;
         for (int i = 0; i < mano.size(); i++) {
             suma += mano.get(i);
         }

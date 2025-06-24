@@ -1,5 +1,9 @@
+package juego;
 
 import java.util.ArrayList;
+import barajas.BarajaInglesa;
+import personas.Jugador;
+import personas.Crupier;
 
 public class Operaciones {
 
@@ -11,11 +15,11 @@ public class Operaciones {
         ArrayList<Integer> manoInglesa = jugador.getManoInglesa();
         manoInglesa.add(unaCarta);
         jugador.setManoInglesa(manoInglesa);
-        
+
         int sumaMano = 0;
 
         for (int i = 0; i < manoInglesa.size(); i++) {
-            sumaMano+= manoInglesa.get(i);
+            sumaMano += manoInglesa.get(i);
         }
 
         if (sumaMano > 21) {
@@ -25,7 +29,7 @@ public class Operaciones {
         }
     }
 
-    void funcion2(Crupier crupier){
+    void funcion2(Crupier crupier) {
         BarajaInglesa barajaInglesa = new BarajaInglesa();
         ArrayList<Integer> manoCrupier = crupier.getMano();
 
@@ -36,7 +40,7 @@ public class Operaciones {
 
     }
 
-    boolean funcionAs(Jugador jugador){
+    boolean funcionAs(Jugador jugador) {
         boolean res = false;
         for (int i = 0; i < jugador.getManoInglesa().size(); i++) {
             if (jugador.getManoInglesa().get(i) == 11) {
@@ -48,4 +52,3 @@ public class Operaciones {
     }
 
 }
-

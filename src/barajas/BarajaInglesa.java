@@ -1,3 +1,5 @@
+package barajas;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -22,7 +24,7 @@ public class BarajaInglesa {
 
     }
 
-    ArrayList<Integer> repartirCarta() {
+    public ArrayList<Integer> repartirCarta() {
         ArrayList<Integer> listaCartas = new ArrayList<>();
         Random random = new Random();
         listaCartas.add(numeros.get(random.nextInt(numeros.size())));
@@ -30,12 +32,12 @@ public class BarajaInglesa {
         return listaCartas;
     }
 
-    int repartirUnaCarta() {
+    public int repartirUnaCarta() {
         Random random = new Random();
         return numeros.get(random.nextInt(numeros.size()));
     }
 
-    int sumaMano(ArrayList<Integer> listaCartas) {
+    public int sumaMano(ArrayList<Integer> listaCartas) {
         int suma = 0;
         for (int carta : listaCartas) {
             suma += carta;
