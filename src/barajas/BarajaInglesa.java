@@ -18,10 +18,6 @@ public class BarajaInglesa {
             numeros.add(10);
         }
 
-        for (int j = 0; j < 4; j++) {
-            numeros.add(11);
-        }
-
     }
 
     public ArrayList<Integer> repartirCarta() {

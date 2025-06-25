@@ -9,6 +9,7 @@ public class Jugador {
     public int suma = 0;
     public int manoAnterior = 0;
     public int puntos;
+    public boolean especialUsada = false;
 
     public Jugador(String nombre, ArrayList<Integer> manoInglesa, String manoEspecial, int puntos) {
         this.nombre = nombre;
@@ -55,5 +56,13 @@ public class Jugador {
 
     public void setManoEspecial(String manoEspecial) {
         this.manoEspecial = manoEspecial;
+    }
+
+    public boolean isEspecialUsada() {
+        return especialUsada;
+    }
+
+    public void setEspecialUsada(boolean especialUsada) {
+        this.especialUsada = especialUsada;
     }
 }

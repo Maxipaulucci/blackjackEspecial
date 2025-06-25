@@ -14,7 +14,7 @@ public class Juego {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 new Interfaz();
-            }
+            }  
         });
     }
 }
